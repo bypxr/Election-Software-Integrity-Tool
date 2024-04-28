@@ -24,7 +24,16 @@ To get this project up and running, please follow these steps:
    ```
    pip install -r requirements.txt
    ```
-3. To start the system, run the main script:
+   pip install pandas
+   ```
+   pip install sqlite3
+   ```
+   pip install hashlib
+   ```
+   pip install email.mine.multipart
+   ```
+   
+4. To start the system, run the main script:
    ```
    python main.py
    ```
