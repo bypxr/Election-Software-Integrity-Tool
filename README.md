@@ -1,6 +1,3 @@
-Certainly! Here's the README content rewritten into normal paragraph style:
-
----
 
 # Automated Voter Fraud Detection System
 
@@ -64,7 +61,6 @@ Testing was conducted to ensure each component functions as expected. Here are s
 - Anomaly detection accurately identified discrepancies in voting data.
 - Email alerts were successfully sent upon anomaly detection.
 
-all outputs: 
 ![image](https://github.com/bypxr/Voter-Anomaly-Detection-System/assets/105805753/85db4b51-f421-4bd2-b439-18dcbaa4b40c)
 
 
