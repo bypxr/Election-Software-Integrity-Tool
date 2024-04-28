@@ -22,8 +22,6 @@ To get this project up and running, please follow these steps:
    ```
 2. Install the necessary Python packages using pip:
    ```
-   pip install -r requirements.txt
-   ```
    pip install pandas
    ```
    pip install sqlite3
