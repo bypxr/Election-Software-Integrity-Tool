@@ -24,9 +24,12 @@ To get this project up and running, please follow these steps:
    ```
    pip install pandas
    ```
+   ```
    pip install sqlite3
    ```
+   ```
    pip install hashlib
+   ```
    ```
    pip install email.mine.multipart
    ```
