@@ -1,49 +1,75 @@
+Certainly! Here's the README content rewritten into normal paragraph style:
 
- Blockchain Voting System
+---
 
- Overview
-The Blockchain Voting System is designed to enhance electoral integrity and accessibility using blockchain technology. This system ensures that every vote is accurately counted and verifiable, significantly enhancing the integrity and trust in elections by making the entire voting process transparent and immune to tampering.
+# Automated Voter Fraud Detection System
 
- Features
-- **Secure Voting**: Utilizes blockchain technology to secure votes and ensure that each vote is immutable once entered.
-- **Anomaly Detection**: Incorporates anomaly detection to identify and alert on unusual voting patterns or potential fraud.
-- **Email Alerts**: Integrated email alert system notifies administrators of detected anomalies in real-time.
+## Goal of the Project
 
- Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+This project is designed to enhance the integrity of electoral processes through the development of an automated system that employs blockchain technology, integrated alert systems, and anomaly detection. Our software guarantees that each vote is accurately counted and verifiable, greatly enhancing transparency and trust in elections by safeguarding the voting process against tampering.
 
- Prerequisites
-- Python 3.8 or higher
-- Pandas library
-- SQLite database
+## Significance of the Project
 
- Installation
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/blockchain-voting-system.git
+Given the growing concerns about election integrity in contemporary times, having a reliable system that ensures the transparency and correctness of elections is paramount. This project offers a vital solution by employing cutting-edge technology to dynamically detect and alert on potential electoral fraud, thereby addressing major concerns in electoral systems worldwide.
+
+## Installation and Instructions to Use
+
+To get this project up and running, please follow these steps:
+
+1. Begin by cloning the repository from GitHub:
    ```
-2. **Navigate to the project directory:**
-   ```bash
-   cd blockchain-voting-system
+   git clone https://github.com/yourgithub/voter-fraud-detection.git
    ```
-3. **Install required Python packages:**
-   ```bash
+2. Install the necessary Python packages using pip:
+   ```
    pip install -r requirements.txt
    ```
+3. To start the system, run the main script:
+   ```
+   python main.py
+   ```
 
- Usage
-To run the system, execute the following command in the terminal:
-```bash
-python main.py
-```
+## Structure of the Code
 
- License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+The codebase is organized into several modules:
 
- Authors
-- **Pratyush Mudgal**, **Alieel Pozo** (https://github.com/bypxr)
+- `blockchain.py`: Handles the creation and management of the blockchain.
+- `alert_system.py`: Contains functions for sending email alerts in case of detected anomalies.
+- `detect_anomalies.py`: Functions for detecting voting anomalies from database records.
+- `setup_database.py`: Scripts to set up and populate the database with initial data.
 
- Acknowledgments
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+## Functionalities and Test Results
+
+### Functionalities
+
+- **Blockchain Management**: Manages a blockchain to store voting records securely.
+- **Anomaly Detection**: Detects and reports voting anomalies based on database records.
+- **Alert System**: Sends alerts via email when potential fraud is detected.
+
+### Test Results
+
+Testing was conducted to ensure each component functions as expected. Here are some highlights:
+
+- Blockchain integrity checks passed consistently.
+- Anomaly detection accurately identified discrepancies in voting data.
+- Email alerts were successfully sent upon anomaly detection.
+
+all outputs: 
+![image](https://github.com/bypxr/Voter-Anomaly-Detection-System/assets/105805753/85db4b51-f421-4bd2-b439-18dcbaa4b40c)
+
+
+## Discussion and Conclusions
+
+### Challenges Encountered
+
+- Implementing a real-time anomaly detection system posed challenges due to varying data volumes and the need for immediate response.
+- Ensuring the blockchain was both secure and efficient required careful optimization.
+
+### Limitations
+
+- Current anomaly detection algorithms may not cover all types of electoral fraud.
+- The system assumes the availability of a reliable and secure internet connection.
+
+### Application of Course Learnings
+
+This project allowed the application of theoretical knowledge from our studies in data structures, algorithms, and software engineering to a real-world problem, demonstrating the practical importance of our academic learnings.
