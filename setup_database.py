@@ -1,3 +1,5 @@
+
+#4
 import sqlite3
 from sqlite3 import Error
 import pandas as pd
@@ -69,7 +71,7 @@ def main():
                                         precinct TEXT
                                     ); """
     sql_create_votes_table = """ CREATE TABLE IF NOT EXISTS votes (
-                                     vote_id INTEGER PRIMARY KEY,
+                                     vote_id INTEGER PRIMARY KEY AUTOINCREMENT,
                                      voter_id INTEGER NOT NULL,
                                      candidate_id INTEGER,
                                      timestamp TEXT,
@@ -81,17 +83,24 @@ def main():
         create_table(conn, sql_create_voters_table)
         create_table(conn, sql_create_votes_table)
 
+        # Expanded data insertion
+        voters = [
+            ('2024-04-01', 'Precinct 1'),
+            ('2024-04-02', 'Precinct 1'),
+            ('2024-04-03', 'Precinct 2'),
+            ('2024-04-04', 'Precinct 2'),
+            ('2024-04-05', 'Precinct 3')  # Add more precincts as needed
+        ]
+        for voter in voters:
+            voter_id = insert_voter(conn, voter)
+            # Insert votes for each voter with varying candidates and times
+            votes = [
+                (None, voter_id, 100 + voter_id % 5, '2024-04-24 10:00:00', voter[1]),
+                (None, voter_id, 100 + (voter_id + 1) % 5, '2024-04-24 11:00:00', voter[1])
+            ]
+            for vote in votes:
+                insert_vote(conn, vote)
 
-
-
-        # Insert test data so that we can check if detect_anomalies.py works 
-        voter1_id = insert_voter(conn, ('2024-04-01', 'Precinct 2'))
-        voter2_id = insert_voter(conn, ('2024-04-01', 'Precinct 2'))
-        insert_vote(conn, (None, voter1_id, 102, '2024-04-24 11:00:00', 'Precinct 2'))
-        insert_vote(conn, (None, voter2_id, 103, '2024-04-24 11:05:00', 'Precinct 2'))
-        insert_vote(conn, (None, voter1_id, 104, '2024-04-24 11:10:00', 'Precinct 2'))
-        insert_vote(conn, (None, voter2_id, 105, '2024-04-24 11:15:00', 'Precinct 2'))
-        insert_vote(conn, (None, voter2_id, 106, '2024-04-24 11:20:00', 'Precinct 2'))
         # Load data and check for anomalies
         voters_df, votes_df = load_data(conn)
         anomalies = check_exceeding_votes(voters_df, votes_df)
@@ -105,5 +114,13 @@ def main():
         print("Error! cannot create the database connection.")
     conn.close()
 
-if __name__ == '__main__':
-    main()
+
+
+# main.py 
+from alert_system import alert_system
+
+votes = 105
+registered_voters = 100
+
+# Check and alert on anomalies
+alert_system(votes, registered_voters)
