@@ -66,7 +66,9 @@ Testing was conducted to ensure each component functions as expected. Here are s
 
 ![image](https://github.com/bypxr/Voter-Anomaly-Detection-System/assets/105805753/02cb8996-c820-4f98-90f3-a5c9eca65ea1)
 
-![image](https://github.com/bypxr/Voter-Anomaly-Detection-System/assets/105805753/e732e3bf-2000-4692-bef7-3a9a8cfdaa1f)
+
+![image](https://github.com/bypxr/Voter-Anomaly-Detection-System/assets/105805753/cc01997c-9b9d-4e96-b286-e7941cdab3f3)
+
 
 
 
