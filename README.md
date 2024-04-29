@@ -61,7 +61,12 @@ Testing was conducted to ensure each component functions as expected. Here are s
 - Anomaly detection accurately identified discrepancies in voting data.
 - Email alerts were successfully sent upon anomaly detection.
 
-![image](https://github.com/bypxr/Voter-Anomaly-Detection-System/assets/105805753/85db4b51-f421-4bd2-b439-18dcbaa4b40c)
+
+![image](https://github.com/bypxr/Voter-Anomaly-Detection-System/assets/105805753/9617e0b0-4d93-44c3-be2a-9a3b625d4569)
+
+![image](https://github.com/bypxr/Voter-Anomaly-Detection-System/assets/105805753/02cb8996-c820-4f98-90f3-a5c9eca65ea1)
+
+
 
 
 ## Discussion and Conclusions
